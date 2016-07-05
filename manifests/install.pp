@@ -8,7 +8,7 @@ class demo_mco_middleware::install {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
-  package { $::demo_mco_middleware::package_name:
-    ensure => present,
+  class { '::rabbitmq':
+    delete_guest_user => true,
   }
 }
