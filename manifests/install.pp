@@ -10,5 +10,8 @@ class demo_mco_middleware::install {
 
   class { '::rabbitmq':
     delete_guest_user => true,
+    config_stomp      => true,
+    stomp_ensure      => true,
+    stomp_port        => 61613,
   }
 }

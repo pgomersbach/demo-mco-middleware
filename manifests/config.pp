@@ -21,7 +21,6 @@ class demo_mco_middleware::config {
   rabbitmq_user { 'admin':
     admin    => true,
     password => 'changeme',
-    tags     => ['administrator'],
   }
 
   rabbitmq_user_permissions { 'mcollective@mcollective':
@@ -37,14 +36,14 @@ class demo_mco_middleware::config {
   }
 
   rabbitmq_exchange { 'mcollective_broadcast@mcollective':
-    user     => 'admin',
+    user     => 'mcollective',
     password => 'changeme',
     type     => 'topic',
     ensure   => present,
   }
 
   rabbitmq_exchange { 'mcollective_directed@mcollective':
-    user     => 'admin',
+    user     => 'mcollective',
     password => 'changeme',
     type     => 'direct',
     ensure   => present,
