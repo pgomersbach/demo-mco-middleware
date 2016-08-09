@@ -49,7 +49,7 @@ if [ -d /root/demo-mco-middleware ]; then
   git pull
 else
   echo "Cloning repo"
-  git clone https://github.com/pgomersbach/demo-mco-middleware.git demo-mco-middleware
+  git clone https://github.com/pgomersbach/demo-mco-middleware.git /root/demo-mco-middleware
   cd /root/demo-mco-middleware
 fi
 
